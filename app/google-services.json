@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "195197944405",
+    "firebase_url": "https://barbendingschedule-831e7.firebaseio.com",
+    "project_id": "barbendingschedule-831e7",
+    "storage_bucket": "barbendingschedule-831e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195197944405:android:e56001167b35c0a4",
+        "android_client_info": {
+          "package_name": "com.example.barbendingschedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195197944405-i9up3fj99v1vhjdr697ivoq36jk1gpcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barbendingschedule",
+            "certificate_hash": "1f64466218833566bfb2b536ccc2645d7e623b33"
+          }
+        },
+        {
+          "client_id": "195197944405-p9nq1l642ku6lbrtsfe1cvuc2so9upmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGWD5fwirjf5CIBsoUqspI7Uxro0I07rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195197944405-p9nq1l642ku6lbrtsfe1cvuc2so9upmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

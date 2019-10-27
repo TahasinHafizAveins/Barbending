@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Barbending Schedule</string>
+    <string name="project_list">Project List</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="no_account_yet_create_one">No account yet ?  Create one.</string>
+    <string name="enter_your_e_mail">Enter your e-mail</string>
+    <string name="already_a_member_login">Already a member ? SignIn.</string>
+    <string name="create_account">Create Account</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="address">Address</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="todo">todo</string>
+    <string name="verify_your_email_address">Verify Your Email Address</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="a_verification_massage_has_been_sent_to">A verification massage has been sent to</string>
+    <string name="resend_verification_email">ReSend Verification Email</string>
+    <string name="refresh">Refresh</string>
+    <string name="just_check_your_email_and_follow_the_link_to_finish_creating_your_account_once_you_verify_your_email_address_you_ll_be_able_to_access_all_of_our_services">Just check your email and follow the link to finish creating your account.Once you verify your email address, you\'ll be able to access all of Our services.</string>
+    <string name="forgot_password">Forgot Password !!!</string>
+    <string name="send_password_reset_email">Send Password Reset Email</string>
+    <string name="cancel">Cancel</string>
+    <string name="just_enter_registered_email_to_sent_you_password_reset_instructions">Just enter registered Email to sent you password reset instructions.</string>
+    <string name="back_to_login_section">Back to Login section</string>
+    <string name="logout">LogOut</string>
+    <string name="project_name">Project Name</string>
+    <string name="location">Location</string>
+    <string name="description">Description</string>
+    <string name="add">Add</string>
+    <string name="ok">OK</string>
+    <string name="submit">Submit</string>
+    <string name="generate_excel_file">Generate Excel File</string>
+    <string name="optimization">Optimization</string>
+    <string name="create_new_project">Create New Project</string>
+    <string name="cancle">cancel</string>
+    <string name="enter_actual_length_of_bar_in_field">Enter Actual Length of Bar in field</string>
+    <string name="length_of_bar_in_field">Length of Bar in Field</string>
+</resources>

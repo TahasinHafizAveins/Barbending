@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Add Details for Schedule"
+        android:id="@+id/tilte_top"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilte_top"
+        android:orientation="horizontal"
+        android:layout_above="@+id/button_container">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiNo_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number Of Bar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNo_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_Dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bar Diameter [millimeter] ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Dia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/sp_Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="5dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="a (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="b (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="c (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="d (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="f (meter)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:background="@drawable/transparent_back"
+        >
+
+        <Button
+            android:id="@+id/btn_Submit"
+            style="@style/okBtn"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/submit" />
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            style="@style/cancelBtn"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/cancle" />
+    </RelativeLayout>
+</RelativeLayout>

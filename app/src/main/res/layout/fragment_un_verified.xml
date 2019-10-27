@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.home.unverified.UnVerifiedFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        style="@style/title"
+        android:layout_marginTop="16dp"
+        android:text="@string/verify_your_email_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="@string/a_verification_massage_has_been_sent_to"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        style="@style/testDetails2" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        style="@style/useremail" />
+
+    <TextView
+        android:text="@string/just_check_your_email_and_follow_the_link_to_finish_creating_your_account_once_you_verify_your_email_address_you_ll_be_able_to_access_all_of_our_services"
+        app:layout_constraintBottom_toTopOf="@+id/reSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEmail"
+        style="@style/testDetails" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/refresh"
+        android:text="@string/refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reSend"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        style="@style/refesh" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reSend"
+        android:text="@string/resend_verification_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/refresh"
+        tools:ignore="MissingConstraints"
+        style="@style/resend" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_login"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_marginBottom="8dp"
+        android:text="@string/back_to_login_section"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

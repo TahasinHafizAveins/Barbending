@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/excel"
+        android:icon="@drawable/excelicon"
+        android:title="@string/generate_excel_file" />
+    <item
+        android:id="@+id/optimize"
+        android:title="@string/optimization"
+        android:icon="@drawable/optimization"/>
+</menu>
