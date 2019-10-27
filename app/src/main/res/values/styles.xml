@@ -81,7 +81,8 @@
         <item name="android:layout_height" >wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:paddingTop">10dp</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textColorHint">@color/texthintColor</item>
         <item name="android:inputType">textEmailAddress</item>
     </style>
 
@@ -91,16 +92,19 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textColorHint">@color/texthintColor</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
-    <style name="Loginbtn" parent="Widget.AppCompat.Button.Colored">
+    <style name="Loginbtn" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:padding">16dp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -146,13 +150,13 @@
         <item name="android:textSize">25sp</item>
     </style>
 
-    <style name="CreateBtn" parent="Widget.AppCompat.Button.Colored">
+    <style name="CreateBtn" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:padding">16dp</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -354,6 +358,13 @@
     <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@android:color/holo_orange_dark</item>
         <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+    <style name="createNewAccBtn" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#E6DCDC</item>
     </style>
 
 </resources>

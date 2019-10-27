@@ -7,4 +7,6 @@
     <color name="bgBackSideColor">#f4f0ff</color>
     <color name="darkTextColor">#555555</color>
     <color name="textcolor">#FFFFFF</color>
+    <color name="texthintColor">#FFFFFF</color>
+    <color name="backcolor">#D3030303</color>
 </resources>

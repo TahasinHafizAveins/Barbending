@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:text="Add Details for Schedule"
         android:id="@+id/tilte_top"
         android:textColor="@android:color/white"
-        android:textSize="25sp" />
+        android:textSize="@dimen/large_text_size"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                     android:id="@+id/et_Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp" />
+                    android:textSize="@dimen/small_text_size" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +53,7 @@
                     android:id="@+id/etNo_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +68,7 @@
                     android:id="@+id/et_Dia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +90,7 @@
                     android:id="@+id/et_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -105,7 +105,7 @@
                     android:id="@+id/et_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +120,7 @@
                     android:id="@+id/et_c"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -135,7 +135,7 @@
                     android:id="@+id/et_d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -150,7 +150,7 @@
                     android:id="@+id/et_e"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -165,7 +165,7 @@
                     android:id="@+id/et_f"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/small_text_size"
                     android:inputType="numberDecimal"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -174,9 +174,46 @@
 
     </ScrollView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_Submit"
+                style="@style/okBtn"
+                android:text="@string/submit"
+                app:backgroundTint="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_Cancel"
+                style="@style/cancelBtn"
+                app:backgroundTint="@color/colorAccent"
+                android:text="@string/cancle"
+                />
+        </LinearLayout>
 
 
-    <RelativeLayout
+    </LinearLayout>
+
+   <!-- <RelativeLayout
         android:id="@+id/button_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -198,5 +235,5 @@
             android:layout_alignParentEnd="true"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/cancle" />
-    </RelativeLayout>
+    </RelativeLayout>-->
 </RelativeLayout>

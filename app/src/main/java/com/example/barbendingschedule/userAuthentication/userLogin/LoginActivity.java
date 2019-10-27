@@ -14,13 +14,16 @@ import com.example.barbendingschedule.R;
 import com.example.barbendingschedule.ui.home.HomeActivity;
 import com.example.barbendingschedule.userAuthentication.userLogin.resetPassword.ResetPassword;
 import com.example.barbendingschedule.userAuthentication.userRegistration.RegistrationActivity;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import es.dmoral.toasty.Toasty;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View {
 
-    EditText email;
-    EditText password;
+
+    private TextInputLayout email_tl, password_tl;
+    private TextInputEditText email,password;
     Button loginBtn;
     Button registrationBtn;
     Button resetBtn;

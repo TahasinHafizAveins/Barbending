@@ -13,6 +13,9 @@ import com.example.barbendingschedule.Model.User;
 import com.example.barbendingschedule.R;
 import com.example.barbendingschedule.ui.home.HomeActivity;
 import com.example.barbendingschedule.userAuthentication.userLogin.LoginActivity;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseUser;
 
 import es.dmoral.toasty.Toasty;
 
@@ -21,8 +24,8 @@ public class RegistrationActivity extends AppCompatActivity implements Registrat
     RegistrationContract.Presenter registrationPresenter;
 
 
-    EditText email;
-    EditText password;
+    private TextInputLayout email_tl, password_tl;
+    private TextInputEditText email,password;
     Button registrationBtn;
     Button loginPageBtn;
 
@@ -107,4 +110,5 @@ public class RegistrationActivity extends AppCompatActivity implements Registrat
     public void thisActivity() {
         startActivity(getIntent());
     }
+
 }

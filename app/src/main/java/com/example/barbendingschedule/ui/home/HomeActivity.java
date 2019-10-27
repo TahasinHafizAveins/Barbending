@@ -1,9 +1,11 @@
 package com.example.barbendingschedule.ui.home;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -128,19 +130,24 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         mNavigationView = (NavigationView) findViewById(R.id.navView) ;
         logoutBtn = findViewById(R.id.logout_button);
         homeBtn = findViewById(R.id.home_container);
+       // homeBtn.setPaintFlags(homeBtn.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG); //text underline
 
         setfullwidth();
 
-        ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout, toolbar,R.string.app_name, R.string.app_name);
+        final ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout, toolbar,R.string.app_name, R.string.app_name);
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
+
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer,new MainFragment()).commit();
+                mPresenter.loadMainFragment();
+                mDrawerLayout.closeDrawer(Gravity.LEFT);
             }
         });
+
+
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

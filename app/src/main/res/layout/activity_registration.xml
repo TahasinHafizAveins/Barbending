@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_shape"
+    android:background="@color/backcolor"
     android:orientation="vertical"
     android:padding="@dimen/large_padding">
 
@@ -26,21 +26,48 @@
         android:orientation="vertical">
     <!--  Email Label -->
 
-    <com.google.android.material.textfield.TextInputEditText
+        <!--  Email Label -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#E6DCDC">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                style="@style/EmailField"
+                android:textColor="#E6DCDC"
+                android:hint="@string/enter_your_e_mail" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+         <!--Password Label-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#E6DCDC">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                style="@style/PasswordField"
+                android:textColor="#E6DCDC"
+                android:hint="@string/password" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         style="@style/EmailField"
         android:hint="@string/enter_your_e_mail"
         android:textColor="#E6DCDC"
         android:textColorHint="#E6DCDC" />
 
-    <!--  Password Label -->
+    &lt;!&ndash;  Password Label &ndash;&gt;
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
         style="@style/PasswordField"
         android:hint="@string/password"
         android:textColor="#E6DCDC"
-        android:textColorHint="#E6DCDC" />
+        android:textColorHint="#E6DCDC" />-->
 
     <!--  Button CreateBtn -->
     <com.google.android.material.button.MaterialButton
@@ -54,7 +81,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:textSize="18sp"
+        android:textSize="@dimen/small_text_size"
         android:textColor="#E6DCDC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -32,11 +32,18 @@ public class HomePresenter implements HomeContract.Presenter {
         Log.d("HHHH",mCurrentUser.isEmailVerified()+"");
         if (mCurrentUser.isEmailVerified())
         {
-            mView.loadToolberName(mCurrentUser.getEmail());
+            String username = usernameFromEmail(mCurrentUser.getEmail());
+            mView.loadToolberName(username);
             mView.loadMainFragment(mCurrentUser.getUid());
         }else{
             mView.loadVerifiedFragment();
         }
+    }
+
+    @Override
+    public void loadMainFragment() {
+        mView.loadToolberName(mCurrentUser.getEmail());
+        mView.loadMainFragment(mCurrentUser.getUid());
     }
 
     @Override
@@ -45,5 +52,11 @@ public class HomePresenter implements HomeContract.Presenter {
         mView.reCreate();
     }
 
-
+    private String usernameFromEmail(String email) {
+        if (email.contains("@")) {
+            return email.split("@")[0];
+        } else {
+            return email;
+        }
+    }
 }

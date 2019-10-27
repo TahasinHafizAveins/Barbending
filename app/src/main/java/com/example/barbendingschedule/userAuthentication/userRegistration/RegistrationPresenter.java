@@ -10,10 +10,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationPresenter implements RegistrationContract.Presenter {
 
     private RegistrationContract.View mView;
+    private static final String TAG = "RegistrationActivity";
+
+    private DatabaseReference mDatabase;
 
     RegistrationPresenter(RegistrationContract.View mView) {
         this.mView = mView;
@@ -38,14 +43,13 @@ public class RegistrationPresenter implements RegistrationContract.Presenter {
         return true;
     }
 
-    public void signUp(User user) {
+    public void signUp(final User user) {
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(user.getEmail(), user.getPassword()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
+                    final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
                     if (firebaseUser != null) {
                         firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -53,6 +57,7 @@ public class RegistrationPresenter implements RegistrationContract.Presenter {
                                 if (task.isSuccessful()) {
                                     FirebaseAuth.getInstance().signOut();
                                     mView.startLoginActivity();
+
                                 } else {
                                     mView.showToastOnError("Unable to send verification code");
                                     mView.thisActivity();
@@ -69,5 +74,6 @@ public class RegistrationPresenter implements RegistrationContract.Presenter {
             }
         });
     }
+
 
 }

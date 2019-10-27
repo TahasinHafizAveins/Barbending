@@ -4,6 +4,7 @@ public interface HomeContract {
     interface Presenter{
         void checkCurrentUser();
         void checkVerifiedUser();
+        void loadMainFragment();
         void logOut();
     }
     interface View{
