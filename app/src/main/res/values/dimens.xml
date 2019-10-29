@@ -5,4 +5,5 @@
     <dimen name="large_padding">16dp</dimen>
     <dimen name="large_text_size">20dp</dimen>
     <dimen name="small_text_size">16dp</dimen>
+    <dimen name="ic_delete">30</dimen>
 </resources>

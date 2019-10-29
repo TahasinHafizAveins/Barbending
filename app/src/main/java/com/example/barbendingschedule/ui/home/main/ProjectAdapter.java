@@ -5,15 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.barbendingschedule.Model.Project;
 import com.example.barbendingschedule.R;
+import com.example.barbendingschedule.ui.home.main.helper.SwipeItemTouchHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +26,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
     private MainFragment mainFragment;
     private LayoutInflater inflater;
     private List<Project> projectList;
+    private RecyclerView mRecyclerView;
 
-    public ProjectAdapter(MainFragment mainFragment) {
+    public ProjectAdapter(MainFragment mainFragment,RecyclerView recyclerView) {
         this.mainFragment = mainFragment;
         this.inflater = LayoutInflater.from(mainFragment.getContext());
         this.projectList = new ArrayList<>();
+        this.mRecyclerView = recyclerView;
     }
 
     @NonNull
@@ -65,6 +70,11 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
         }
 
     }
+
+    public Project getProject(int position){
+        return this.projectList.get(position);
+    }
+
     public void restoreProject(Project project){
         projectList.add(project);
         int position = projectList.indexOf(project);
@@ -87,14 +97,17 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
 
 
-    class ProjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+    public class ProjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-        TextView tvName;
+        public TextView tvName;
+        public RelativeLayout viewForeground, viewBacground;
 
         public ProjectHolder(@NonNull View itemView) {
             super(itemView);
 
             tvName= itemView.findViewById(R.id.project_name);
+            viewBacground = itemView.findViewById(R.id.view_background);
+            viewForeground = itemView.findViewById(R.id.view_foreground);
 
             itemView.setOnLongClickListener(this);
             itemView.setOnClickListener(this);
@@ -111,7 +124,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
 
         @Override
         public boolean onLongClick(View v) {
-            open(v);
+           // open(v);
             return false;
         }
 
@@ -139,5 +152,6 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
         }
+
     }
 }

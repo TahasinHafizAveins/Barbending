@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:addStatesFromChildren="false"
     android:background="@android:color/white"
+    android:id="@+id/main_layout"
     >
 
 

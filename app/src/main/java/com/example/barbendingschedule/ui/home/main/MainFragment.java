@@ -1,11 +1,14 @@
 package com.example.barbendingschedule.ui.home.main;
 
 
+import android.content.ClipData;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +18,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.barbendingschedule.Model.Project;
@@ -22,9 +26,12 @@ import com.example.barbendingschedule.R;
 import com.example.barbendingschedule.ui.home.BaseFragment;
 import com.example.barbendingschedule.ui.home.HomeActivity;
 import com.example.barbendingschedule.ui.home.main.addProject.AddProjectDialog;
+import com.example.barbendingschedule.ui.home.main.helper.SwipeItemTouchHelper;
 import com.example.barbendingschedule.ui.project.ProjectActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.barbendingschedule.R.menu.project_menu;
@@ -32,13 +39,15 @@ import static com.example.barbendingschedule.R.menu.project_menu;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends BaseFragment implements MainFragmentContract.View{
+public class MainFragment extends BaseFragment implements MainFragmentContract.View, SwipeItemTouchHelper.SwipeItemTouchHelperListener {
 
     private MainFragmentContract.Presenter mPresenter;
     private FloatingActionButton flAddProject;
     private RecyclerView rvProjects;
     private ProjectAdapter adapter;
+    private List<Project> projectList;
     private String name,description,location;
+    private RelativeLayout main_layout;
     public MainFragment() {
         // Required empty public constructor
     }
@@ -48,7 +57,8 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new MainFragmentPresenter(this);
-        adapter = new ProjectAdapter(this);
+
+        this.projectList = new ArrayList<>();
     }
 
     private void openDialog() {
@@ -74,9 +84,14 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     private void initView(android.view.View view) {
 
         flAddProject = view.findViewById(R.id.addBtn);
+        main_layout = view.findViewById(R.id.main_layout);
         rvProjects = view.findViewById(R.id.recycler_view);
+        adapter = new ProjectAdapter(this,rvProjects);
         rvProjects.setLayoutManager(new LinearLayoutManager(getContext()));
         rvProjects.setAdapter(adapter);
+        ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new SwipeItemTouchHelper(0, ItemTouchHelper.LEFT, this);
+        new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(rvProjects);
+
 
         //fetch projects of User(uid)
         mPresenter.getAllProject(getUid());
@@ -126,5 +141,13 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     @Override
     public void removeFromAdapter(Project project) {
         adapter.removeProject(project);
+    }
+
+    @Override
+    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, final int position) {
+        if (viewHolder instanceof ProjectAdapter.ProjectHolder) {
+
+            deleteProject(adapter.getProject(position));
+        }
     }
 }

@@ -41,4 +41,5 @@
     <string name="cancle">cancel</string>
     <string name="enter_actual_length_of_bar_in_field">Enter Actual Length of Bar in field</string>
     <string name="length_of_bar_in_field">Length of Bar in Field</string>
+    <string name="delete">Delete</string>
 </resources>
