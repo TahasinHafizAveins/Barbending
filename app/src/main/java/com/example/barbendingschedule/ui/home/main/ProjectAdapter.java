@@ -65,6 +65,11 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectH
         }
 
     }
+    public void restoreProject(Project project){
+        projectList.add(project);
+        int position = projectList.indexOf(project);
+        notifyItemInserted(position);
+    }
 
     private int getPosition(Project project){
         for (Project x:projectList){
