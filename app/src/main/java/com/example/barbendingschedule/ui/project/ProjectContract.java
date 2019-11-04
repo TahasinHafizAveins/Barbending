@@ -8,7 +8,7 @@ import okhttp3.ResponseBody;
 
 public interface ProjectContract {
     interface Presenter {
-        void getAllBar(String bar_id);
+        void getAllBar(String project_id);
 
         void deleteBar(Bar bar);
 

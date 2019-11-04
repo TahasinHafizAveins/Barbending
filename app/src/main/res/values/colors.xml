@@ -6,7 +6,7 @@
     <color name="colorTextFiled">#D7512DA8</color>
     <color name="bgBackSideColor">#f4f0ff</color>
     <color name="darkTextColor">#555555</color>
-    <color name="textcolor">#FFFFFF</color>
-    <color name="texthintColor">#FFFFFF</color>
+    <color name="textcolor">#141414</color>
+    <color name="texthintColor">#F84B4646</color>
     <color name="backcolor">#D3030303</color>
 </resources>
