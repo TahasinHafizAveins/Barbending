@@ -3,7 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="large_padding">16dp</dimen>
-    <dimen name="large_text_size">20dp</dimen>
-    <dimen name="small_text_size">16dp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="Title_text_size">30sp</dimen>
+    <dimen name="small_text_size">16sp</dimen>
     <dimen name="ic_delete">30</dimen>
 </resources>

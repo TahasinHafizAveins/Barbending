@@ -380,13 +380,13 @@
         <item name="android:layout_weight">1</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_marginLeft">@dimen/large_padding</item>
+        <item name="android:layout_marginRight">@dimen/large_padding</item>
     </style>
 
     <style name="login_signup_tv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">40sp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">@dimen/Title_text_size</item>
         <item name="android:textColor">@color/textcolor</item>
         <item name="android:typeface">monospace</item>
     </style>
