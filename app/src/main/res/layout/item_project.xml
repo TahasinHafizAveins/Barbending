@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#fff"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="1dp"
         card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true">
 
@@ -21,7 +21,7 @@
             android:id="@+id/view_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_red_dark">
+            android:background="@drawable/newdeletedesign">
 
             <ImageView
                 android:id="@+id/delete_icon"
@@ -48,18 +48,40 @@
             android:id="@+id/view_foreground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/newitemdesign"
             >
+
+            <ImageView
+                android:id="@+id/imagebox"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/iconboxes"/>
 
         <TextView
             android:id="@+id/project_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textAllCaps="true"
-            android:background="@color/colorPrimary"
+            android:layout_toEndOf="@+id/imagebox"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textAllCaps="false"
+            android:background="@drawable/newitemdesign"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/large_text_size"
+            android:textSize="@dimen/medium_text_size"
+            android:fontFamily="@font/source_sans_pro"
             android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_forward_black_24dp"/>
 
         </RelativeLayout>
 

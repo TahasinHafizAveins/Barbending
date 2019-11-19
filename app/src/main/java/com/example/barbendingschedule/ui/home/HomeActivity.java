@@ -1,6 +1,7 @@
 package com.example.barbendingschedule.ui.home;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -11,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +34,8 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
     private DrawerLayout mDrawerLayout;
     private FragmentManager manager;
     private NavigationView mNavigationView;
-    private Button logoutBtn,homeBtn;
+    private Button homeBtn;
+    private ImageButton logoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +124,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 
+
     }
 
     public void setUpNavigationDrawer(){
@@ -137,6 +141,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         final ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout, toolbar,R.string.app_name, R.string.app_name);
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
+       //toolbar.setNavigationIcon(R.drawable.custom_icon);
 
 
         homeBtn.setOnClickListener(new View.OnClickListener() {

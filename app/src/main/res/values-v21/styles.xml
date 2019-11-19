@@ -32,7 +32,24 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:backgroundTint">@android:color/transparent</item>
         <item name="android:textColor">@color/textcolor</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="nav_button_style" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="toolbar_style" parent="Base.ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
 

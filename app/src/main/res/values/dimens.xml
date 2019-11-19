@@ -7,4 +7,6 @@
     <dimen name="Title_text_size">30sp</dimen>
     <dimen name="small_text_size">16sp</dimen>
     <dimen name="ic_delete">30</dimen>
+    <dimen name="nav_button_margin">5dp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
 </resources>

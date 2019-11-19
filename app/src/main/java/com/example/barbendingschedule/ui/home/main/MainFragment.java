@@ -46,8 +46,9 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     private RecyclerView rvProjects;
     private ProjectAdapter adapter;
     private List<Project> projectList;
-    private String name,description,location;
+    private String name, description, location;
     private RelativeLayout main_layout;
+
     public MainFragment() {
         // Required empty public constructor
     }
@@ -63,7 +64,7 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
 
     private void openDialog() {
         Bundle bundle = new Bundle();
-        bundle.putString("uid",getUid());
+        bundle.putString("uid", getUid());
 
         AddProjectDialog addProjectDialog = new AddProjectDialog();
         addProjectDialog.setCancelable(false);
@@ -86,7 +87,7 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
         flAddProject = view.findViewById(R.id.addBtn);
         main_layout = view.findViewById(R.id.main_layout);
         rvProjects = view.findViewById(R.id.recycler_view);
-        adapter = new ProjectAdapter(this,rvProjects);
+        adapter = new ProjectAdapter(this, rvProjects);
         rvProjects.setLayoutManager(new LinearLayoutManager(getContext()));
         rvProjects.setAdapter(adapter);
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new SwipeItemTouchHelper(0, ItemTouchHelper.LEFT, this);
@@ -95,7 +96,6 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
 
         //fetch projects of User(uid)
         mPresenter.getAllProject(getUid());
-
 
         flAddProject.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +120,7 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     }
 
     @Override
-    public  void addProject(Project project){
+    public void addProject(Project project) {
         adapter.addProject(project);
     }
 
@@ -128,7 +128,7 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     public void startProjectActivity(Project project) {
         Intent intent = new Intent(getContext(), ProjectActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("project",project);
+        bundle.putSerializable("project", project);
         intent.putExtras(bundle);
         startActivity(intent);
     }

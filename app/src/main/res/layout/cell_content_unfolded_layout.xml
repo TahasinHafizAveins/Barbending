@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/foldunfoldstyle"
     android:visibility="gone"
     >
 
@@ -12,10 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bar_title"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/newitemdesign"
         android:gravity="center"
         android:textAllCaps="true"
         android:padding="8dp"
+        android:fontFamily="@font/source_sans_pro_semibold"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
@@ -50,6 +52,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="4"
                 android:padding="5dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="@dimen/large_text_size" />
         </LinearLayout>
 
@@ -77,6 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="4"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:padding="5dp"
                 android:textSize="@dimen/large_text_size" />
         </LinearLayout>
@@ -106,6 +112,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="4"
                 android:padding="5dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="@dimen/large_text_size" />
         </LinearLayout>
 
@@ -162,6 +170,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="4"
                 android:padding="5dp"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="@dimen/large_text_size" />
         </LinearLayout>
 
@@ -219,7 +229,8 @@
                 android:layout_height="wrap_content"
                 android:text="Length"
                 android:gravity="center"
-                android:background="@color/colorTextFiled"
+                android:background="@drawable/textview_design"
+                android:fontFamily="@font/source_sans_pro"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -229,7 +240,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/darkTextColor"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -247,7 +259,8 @@
                 android:layout_height="wrap_content"
                 android:text="No. Of Bar"
                 android:gravity="center"
-                android:background="@color/colorTextFiled"
+                android:background="@drawable/textview_design"
+                android:fontFamily="@font/source_sans_pro"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -257,7 +270,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/darkTextColor"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -276,7 +290,8 @@
                 android:text="Dia"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                android:background="@color/colorTextFiled"
+                android:background="@drawable/textview_design"
+                android:fontFamily="@font/source_sans_pro"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -285,7 +300,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/darkTextColor"
+                android:fontFamily="@font/source_sans_pro"
+                android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
