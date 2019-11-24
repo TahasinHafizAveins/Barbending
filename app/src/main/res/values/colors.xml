@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
-    <color name="colorAccent">#F1E006</color>
+    <color name="colorAccent">#DACE6B</color>
     <color name="colorTextFiled">#D7512DA8</color>
     <color name="bgBackSideColor">#f4f0ff</color>
     <color name="darkTextColor">#555555</color>
@@ -10,4 +10,6 @@
     <color name="texthintColor">#F84B4646</color>
     <color name="backcolor">#D3030303</color>
     <color name="red">#D60606</color>
+    <color name="btnfloating">#FFD500</color>
+    <color name="textcolor_bl">#8A9EAD</color>
 </resources>

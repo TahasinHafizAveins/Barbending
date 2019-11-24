@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/topview_design"
         android:gravity="center"
         android:padding="8dp"
         android:text="@string/create_new_project"
@@ -31,7 +31,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/textcolor_bl"
                 android:textColorHint="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/textcolor_bl"
                 android:textColorHint="@color/colorPrimaryDark"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/textcolor_bl"
                 android:textColorHint="@color/colorPrimaryDark"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -86,12 +86,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
-
             <Button
-                android:id="@+id/btnAdd"
-                style="@style/okBtn"
-                android:text="@string/add"
-                app:backgroundTint="@color/colorAccent" />
+                android:id="@+id/btnCancel"
+                style="@style/cancelBtn"
+                app:backgroundTint="@android:color/black"
+                android:text="@string/cancle"
+                />
+
 
         </LinearLayout>
 
@@ -101,13 +102,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
-
             <Button
-                android:id="@+id/btnCancel"
-                style="@style/cancelBtn"
-                app:backgroundTint="@color/colorAccent"
-                android:text="@string/cancle"
-                />
+                android:id="@+id/btnAdd"
+                style="@style/okBtn"
+                android:text="@string/add"
+                app:backgroundTint="@color/btnfloating" />
+
         </LinearLayout>
 
 

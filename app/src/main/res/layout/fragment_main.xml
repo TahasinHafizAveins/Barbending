@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="@color/btnfloating"
         app:useCompatPadding="true"
         android:scaleType="center"
         app:maxImageSize="50dp"

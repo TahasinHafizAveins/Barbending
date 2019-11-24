@@ -48,9 +48,9 @@
     </style>
 
     <style name="toolbar_style" parent="Base.ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
-        <item name="android:textAllCaps">true</item>
-    </style>
+    <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+    <item name="android:textAllCaps">true</item>
+</style>
 
 
 </resources>

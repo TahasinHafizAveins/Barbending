@@ -31,10 +31,12 @@
         android:id="@+id/btn_addDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        app:backgroundTint="@color/colorAccent"
+        app:backgroundTint="@color/btnfloating"
+        app:useCompatPadding="true"
+        android:scaleType="center"
+        app:maxImageSize="50dp"
         app:srcCompat="@drawable/add" />
 
 </RelativeLayout>

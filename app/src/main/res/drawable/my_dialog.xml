@@ -15,7 +15,7 @@
             android:width="2px"
             android:color="@color/colorPrimaryDark" />
         <solid
-            android:color="#E1FFFFFF"
+            android:color="#FFFFFFFF"
             />
     </shape>
 
