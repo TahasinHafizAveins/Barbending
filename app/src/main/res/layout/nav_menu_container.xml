@@ -126,7 +126,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/usericon" />
+            android:src="@drawable/usericon"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/user_name"
@@ -138,7 +139,8 @@
             android:layout_centerVertical="true"
             android:text="username"
             android:textSize="20sp"
-            android:layout_toRightOf="@+id/user_icon"/>
+            android:layout_toRightOf="@+id/user_icon"
+            android:visibility="gone"/>
 
 
         <ImageButton

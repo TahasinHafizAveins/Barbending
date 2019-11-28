@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
@@ -40,6 +42,18 @@ public class AddProjectDialog extends DialogFragment implements DialogContract.V
         this.uid = getArguments().getString("uid");
         Log.d("Uid",""+uid);
 
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Window window = getDialog().getWindow();
+        WindowManager.LayoutParams windowParams = window.getAttributes();
+        windowParams.dimAmount = 0.90f;
+        windowParams.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        window.setAttributes(windowParams);
+
     }
 
     @NonNull
@@ -52,6 +66,12 @@ public class AddProjectDialog extends DialogFragment implements DialogContract.V
 
         AlertDialog alertDialog = new AlertDialog.Builder(getActivity(), R.style.MyDialog).setView(view).create();
         initView(view);
+
+        /*WindowManager.LayoutParams lp = alertDialog.getWindow().getAttributes();
+        lp.dimAmount=0.0f;
+        alertDialog.getWindow().setAttributes(lp);
+        alertDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);*/
+
         return alertDialog;
     }
     private void initView(View view) {

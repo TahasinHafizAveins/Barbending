@@ -42,7 +42,8 @@ public class HomePresenter implements HomeContract.Presenter {
 
     @Override
     public void loadMainFragment() {
-        mView.loadToolberName(mCurrentUser.getEmail());
+        String username = usernameFromEmail(mCurrentUser.getEmail());
+        mView.loadToolberName(username);
         mView.loadMainFragment(mCurrentUser.getUid());
     }
 

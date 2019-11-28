@@ -18,6 +18,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -70,6 +71,8 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
         addProjectDialog.setCancelable(false);
         addProjectDialog.setArguments(bundle);
         addProjectDialog.show(getChildFragmentManager(), "Dialog Box open");
+
+
     }
 
     @Override
