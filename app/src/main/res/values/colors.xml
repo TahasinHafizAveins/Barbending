@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#DACE6B</color>
     <color name="colorTextFiled">#D7512DA8</color>
     <color name="bgBackSideColor">#f4f0ff</color>
@@ -12,4 +12,7 @@
     <color name="red">#D60606</color>
     <color name="btnfloating">#FFD500</color>
     <color name="textcolor_bl">#8A9EAD</color>
+    <color name="colorPrimary_1">@android:color/white</color>
+    <color name="colorPrimaryDark_1">@android:color/white</color>
+
 </resources>

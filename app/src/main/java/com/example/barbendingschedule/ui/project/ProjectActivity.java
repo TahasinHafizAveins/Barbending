@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ import com.example.barbendingschedule.BuildConfig;
 import com.example.barbendingschedule.Model.Bar;
 import com.example.barbendingschedule.Model.Project;
 import com.example.barbendingschedule.R;
+import com.example.barbendingschedule.ui.home.HomeActivity;
+import com.example.barbendingschedule.ui.home.main.MainFragment;
 import com.example.barbendingschedule.ui.project.addDetails.BarDetails;
 import com.example.barbendingschedule.ui.project.fieldLengthDialog.FieldLengthDialogContract;
 import com.example.barbendingschedule.ui.project.fieldLengthDialog.FieldLength_Dialog;
@@ -40,6 +43,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.Objects;
 
 import okhttp3.ResponseBody;
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -50,6 +54,7 @@ import static com.example.barbendingschedule.R.menu.project_menu;
 public class ProjectActivity extends AppCompatActivity implements ProjectContract.View {
     private ProjectPresenter mPresenter;
     private TextView tvTitle;
+    private ImageButton btn_home;
     private Project project;
     private FloatingActionButton flAddDetails;
     private Toolbar toolbar;
@@ -74,9 +79,12 @@ public class ProjectActivity extends AppCompatActivity implements ProjectContrac
 
         toolbar = findViewById(R.id.toolbar_project);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(project.getName());
+        Objects.requireNonNull(getSupportActionBar()).setTitle("");
 
         flAddDetails = findViewById(R.id.btn_addDetails);
+        tvTitle = findViewById(R.id.toolbar_project_tv);
+        btn_home = findViewById(R.id.home_btn);
+        tvTitle.setText(project.getName());
         rvBars = findViewById(R.id.recycler_view_Bars);
         rvBars.setLayoutManager(new LinearLayoutManager(this));
         rvBars.setAdapter(adapter);
@@ -89,6 +97,14 @@ public class ProjectActivity extends AppCompatActivity implements ProjectContrac
                 startActivityForResult(intent,REQUEST_CODE);
             }
         });
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(ProjectActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
         mPresenter.getAllBar(project.get_id());
     }
 
@@ -96,6 +112,7 @@ public class ProjectActivity extends AppCompatActivity implements ProjectContrac
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode==REQUEST_CODE && resultCode== RESULT_OK){
             Log.d("REQUEST_CODE","ok") ;
+            assert data != null;
             Bar bar = (Bar) data.getSerializableExtra(Constants.BAR);
             adapter.addBar(bar);
         }

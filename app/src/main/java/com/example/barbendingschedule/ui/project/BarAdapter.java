@@ -76,6 +76,10 @@ public class BarAdapter extends RecyclerView.Adapter<BarAdapter.BarHolder> {
             notifyItemRemoved(position);
         }
     }
+    public Bar getBar(int position){
+        return this.barList.get(position);
+    }
+
 
     public List<Bar> getBarList() {
         return this.barList;
@@ -96,7 +100,7 @@ public class BarAdapter extends RecyclerView.Adapter<BarAdapter.BarHolder> {
         return super.getItemId(position);
     }
 
-    class BarHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener, View.OnClickListener {
+    public class BarHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener, View.OnClickListener {
 
         TextView tvName,tvTitle;
         TextView tvLength,fdLength;

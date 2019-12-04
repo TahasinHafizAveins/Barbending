@@ -30,8 +30,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLength"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark_1"
+                android:textColorHint="@color/colorPrimaryDark_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size"

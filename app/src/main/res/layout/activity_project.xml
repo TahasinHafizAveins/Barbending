@@ -11,10 +11,30 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_project"
         android:theme="@style/toolbar_style"
-        app:titleTextColor="@android:color/black"
+        app:titleTextColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary_1" >
+
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_home"
+            />
+        <TextView
+            android:layout_marginStart="40dp"
+            android:id="@+id/toolbar_project_tv"
+            style="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/source_sans_pro_bold"
+            />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_Bars"

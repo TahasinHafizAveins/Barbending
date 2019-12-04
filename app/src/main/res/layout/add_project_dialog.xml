@@ -35,7 +35,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
                 android:textColor="@color/textcolor_bl"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size" />
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size"
                 android:textColor="@color/textcolor_bl"
-                android:textColorHint="@color/colorPrimaryDark"/>
+                android:textColorHint="@color/colorPrimaryDark_1"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_text_size"
                 android:textColor="@color/textcolor_bl"
-                android:textColorHint="@color/colorPrimaryDark"/>
+                android:textColorHint="@color/colorPrimaryDark_1"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

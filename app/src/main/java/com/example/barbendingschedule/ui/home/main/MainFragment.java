@@ -2,11 +2,13 @@ package com.example.barbendingschedule.ui.home.main;
 
 
 import android.content.ClipData;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,6 +36,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static com.example.barbendingschedule.R.menu.project_menu;
 
@@ -93,6 +96,7 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
         adapter = new ProjectAdapter(this, rvProjects);
         rvProjects.setLayoutManager(new LinearLayoutManager(getContext()));
         rvProjects.setAdapter(adapter);
+
         ItemTouchHelper.SimpleCallback itemTouchHelperCallback = new SwipeItemTouchHelper(0, ItemTouchHelper.LEFT, this);
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(rvProjects);
 
@@ -150,7 +154,31 @@ public class MainFragment extends BaseFragment implements MainFragmentContract.V
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, final int position) {
         if (viewHolder instanceof ProjectAdapter.ProjectHolder) {
 
-            deleteProject(adapter.getProject(position));
+
+            final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Objects.requireNonNull(getContext()));
+
+            alertDialogBuilder.setCancelable(false);
+            alertDialogBuilder.setMessage("Do you want to Delete the project");
+            alertDialogBuilder.setPositiveButton("yes",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            deleteProject(adapter.getProject(position));
+                            //Toast.makeText(mainFragment.getContext(),"You clicked yes button",Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+            alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                    adapter.notifyItemChanged(position);
+                }
+            });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
         }
     }
+
 }
